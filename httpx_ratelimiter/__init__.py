@@ -1,5 +1,5 @@
 """Ratelimiting for httpx"""
-__version__ = "0.0.4"
+__version__ = "0.0.5"
 
 # ruff: noqa: F401,F403,F405
 from pyrate_limiter import *

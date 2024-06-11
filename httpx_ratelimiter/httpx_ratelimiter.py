@@ -139,7 +139,7 @@ class LimiterMixin(MIXIN_BASE):
 
     def _name(self, request: Request):
         """Get a name for the given request"""
-        return request.url.netloc if self.per_host else self.default_name
+        return request.url.netloc.decode() if self.per_host else self.default_name
 
     def _fill_bucket(self, request: Request):
         """Partially fill the bucket for the given request, requiring an extra delay
